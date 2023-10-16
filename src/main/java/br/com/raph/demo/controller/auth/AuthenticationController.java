@@ -4,6 +4,7 @@ import br.com.raph.demo.message.request.auth.AuthenticationRequest;
 import br.com.raph.demo.message.request.auth.RegisterRequest;
 import br.com.raph.demo.message.response.auth.AuthenticationResponse;
 import br.com.raph.demo.service.auth.AuthenticationService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +20,7 @@ public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
     @PostMapping("/register")
-    public ResponseEntity<AuthenticationResponse> register(@RequestBody RegisterRequest registerRequest) {
+    public ResponseEntity<AuthenticationResponse> register(@RequestBody @Valid RegisterRequest registerRequest) {
         return ResponseEntity.ok(authenticationService.register(registerRequest));
     }
 

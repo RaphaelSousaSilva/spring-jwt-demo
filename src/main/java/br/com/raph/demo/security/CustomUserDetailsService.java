@@ -1,4 +1,4 @@
-package br.com.raph.demo.security.jwt;
+package br.com.raph.demo.security;
 
 import br.com.raph.demo.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
