@@ -3,10 +3,10 @@ package br.com.raph.demo.validator;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-public class PasswordValidator implements ConstraintValidator<ValidPassword, String> {
+public class PasswordValidator implements ConstraintValidator<StrongPassword, String> {
 
     @Override
-    public void initialize(ValidPassword constraintAnnotation) {
+    public void initialize(StrongPassword constraintAnnotation) {
     }
 
     @Override

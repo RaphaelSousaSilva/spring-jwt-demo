@@ -1,6 +1,6 @@
 package br.com.raph.demo.message.request.auth;
 
-import br.com.raph.demo.validator.ValidPassword;
+import br.com.raph.demo.validator.StrongPassword;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -17,6 +17,6 @@ public class RegisterRequest {
     @Email
     private String email;
     @NotBlank
-    @ValidPassword
+    @StrongPassword
     private String password;
 }

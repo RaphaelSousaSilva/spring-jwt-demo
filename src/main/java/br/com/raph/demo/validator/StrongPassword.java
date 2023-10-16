@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = PasswordValidator.class)
 @Target( { ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ValidPassword {
+public @interface StrongPassword {
     String message() default "Invalid password: must be at least 8 characters long, contain at least one digit, one lowercase letter, one uppercase letter, and one special character.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
